@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="firstcss.css">
+        <title>Traffic Rules</title>
+        <script>
+            //best color #be95f5
+            function validateSignup(){
+                let name=document.getElementById("name").value;
+                let uname=document.getElementById("username2").value;
+                let password=document.getElementById("passwd2").value;
+                let message=document.getElementById("message");
+                let right=document.getElementById("img_dis");
+                let wrong=document.getElementById("img_wrong");
+
+                if (name=="" || name==" "){
+                    message.innerHTML="Please enter your name";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                if (uname=="" || uname==" "){
+                    message.innerHTML="Please enter a username";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                if (password=="" || password==" "){
+                    message.innerHTML="Please enter a password";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                let check=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+                if (!check.test(password)){
+                    message.innerHTML="Please follow the guidelines for setting up a password.";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                message.innerHTML="";
+                right.style.visibility="visible";
+                wrong.style.visibility="hidden";
+                return true;
+            }
+            function validateLogin(){
+                let uname=document.getElementById("username").value;
+                let password=document.getElementById("passwd").value;
+                let message=document.getElementById("message2");
+                let right=document.getElementById("img_dis");
+                let wrong=document.getElementById("img_wrong");
+                if (uname=="" || uname==" "){
+                    message.innerHTML="Please enter your username";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                if (password=="" || password==" "){
+                    message.innerHTML="Please enter your password";
+                    message.style.visibility="visible";
+                    right.style.visibility="hidden";
+                    wrong.style.visibility="visible";
+                    return false;
+                }
+                message.innerHTML="";
+                right.style.visibility="visible";
+                wrong.style.visibility="hidden";
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <br>
+        <div class="main">
+        <div class="container">
+            <input type="checkbox" id="flip">
+            <div class="cover">
+                <div class="front">
+                    <img src="traffic-light-icon.png" id="img_dis">
+                    <img src="traffic-light-icon2.png" id="img_wrong">
+                </div>
+            </div>
+
+            <div class="forms">
+                <div class="form_content">
+                    <div class="signup_form">
+                        <div class="title">Sign Up</div>
+                        <form onsubmit="return validateSignup()" action="home_page2.html">       
+                            <div class="form_box">
+                                <div class="mess_text">
+                                    <p id="message">Please follow the guidelines for setting up a password.</p>
+                                </div>
+                                <div class="form_fields">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="Name">
+                                </div>
+                                <div class="form_fields">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username2" placeholder="Username">
+                                </div>
+                                <div class="form_fields">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="passwd2" placeholder="Password">
+                                </div>
+                                <div class="instructions">
+                                    <ul id="list1" style="list-style-type: none;">
+                                        <li>Password must be longer than 8 characters.</li>
+                                        <li>Password must have<ul id="list2">
+                                            <li>at least one uppercase character</li>
+                                            <li>at least one lowercase character</li>
+                                            <li>at least one number</li>
+                                        </ul></li>
+                                    </ul>
+                                </div>
+                                <div class="button">
+                                    <input type="submit" value="Submit">
+                                </div>
+                                <div class="change">
+                                    Already have an account? <label for="flip">Login</label>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="login_form">
+                        <div class="title">Login</div>
+                        <form onsubmit="return validateLogin()" action="home_page2.html">
+                            <div class="form_box">
+                                <div class="form_fields">
+                                    <label for="username2">Username</label>
+                                    <input type="text" id="username" placeholder="Username">
+                                </div>
+                                <div class="form_fields">
+                                    <label for="password2">Password</label>
+                                    <input type="password" id="passwd" placeholder="Password">
+                                </div>
+                                <div class="mess_text">
+                                    <p id="message2">Please enter your username.</p>
+                                </div>
+                                <div class="button">
+                                    <input type="submit" value="Submit"></a>
+                                </div>
+                                <div class="change">
+                                    Don't have an account? <label for="flip">Sign Up</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

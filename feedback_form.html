@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="norm_pages.css">
+        <title>Feedback Form</title>
+
+        <script>
+            function submit_feedback(){
+                alert("Thank you for your feedback!");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Indian Traffic Rules</h1>
+            <h2 id="feed_head">Feedback Form</h2>
+            <p id="beg_text">Thank you for using our website. We would love to hear your valuable feedback. Please help us out by filling the following form.</p>
+            <table id="feedback">
+                <form onsubmit="submit_feedback()">
+                    <tr>
+                        <td><label>How would you rate the information presented by the website?</label></td>
+                        <td><input type="radio" id="q1" value="1">1</td>
+                        <td><input type="radio" id="q1" value="2">2</td>
+                        <td><input type="radio" id="q1" value="3">3</td>
+                        <td><input type="radio" id="q1" value="4">4</td>
+                        <td><input type="radio" id="q1" value="5">5</td>
+                    </tr>
+                    <tr>
+                        <td><label>How would you rate the ease of using this website?</label></td>
+                        <td><input type="radio">1</td>
+                        <td><input type="radio">2</td>
+                        <td><input type="radio">3</td>
+                        <td><input type="radio">4</td>
+                        <td><input type="radio">5</td>
+                    </tr>
+                    <tr>
+                        <td><label>Did you find the information you were looking for?</label></td>
+                        <td><input type="radio">Yes</td>
+                        <td><input type="radio">No</td>
+                    </tr>
+                    <tr>
+                        <td>Any other feedback?</td>
+                        <td colspan="4"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><button type="submit" style="font-size: 80%;">Submit</button></td>
+                    </tr>
+                </form>
+            </table>
+        </div>           
+    </body>
+</html>

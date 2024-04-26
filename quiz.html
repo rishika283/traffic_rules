@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="norm_pages.css">
+        <script src="D:\College\Web Programming\Codes\pls1\src\index.js"></script>
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <title>Quiz</title>
+
+        <script>
+            function check_quiz(){
+                let a1=document.getElementById("q1").value;
+                let a2=document.getElementById("q2").value;
+                let a3=document.getElementById("q3").value;
+                let marks=0;
+                if (a1=="overtaking"){
+                    marks++;
+                }
+                if (a2=="5000"){
+                    marks++;
+                }
+                if (a3=="70"){
+                    marks++;
+                }
+                alert("Your quiz marks are "+marks);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Quiz</h1>
+            <div class="quiz_container">
+                <form id="quiz_form" onsubmit="check_quiz()">
+                    <p id="beg_text">Please attend this short quiz to test your knowledge on Indian Traffic Rules.</p>
+                    <div class="question">
+                        <label>Question 1: Identify this road sign: </label>
+                        <br>
+                        <img class="sign_img" src="no-overtaking-sign.jpg">
+                        <br>
+                        <input type='radio' id='q1' value="overtaking">No overtaking
+                        <input type='radio' id='q1' value="entry">No entry
+                        <input type='radio' id='q1' value="stop">Stop
+                    </div>
+                    <div class="question">
+                        <label>Question 2: What is the fine for driving without a valid driving license?</label>
+                        <br>
+                        <input type='radio' id='q2' value="2000">Rs. 2000
+                        <input type='radio' id='q2' value="5000">Rs. 5000
+                        <input type='radio' id='q2' value="10000">Rs. 10000
+                    </div>
+                    <div class="question">
+                        <label>Question 3: What is the speed limit for cars in India?</label>
+                        <br>
+                        <input type="radio" id="q3" value="50">50 KMPH
+                        <input type="radio" id="q3" value="60">60 KMPH
+                        <input type="radio" id="q3" value="70">70 KMPH
+                    </div>
+                    <br>
+                    <input type="submit">
+                </form>
+              </div>
+        </div>
+        <footer>
+            <div class="foot-icon-next">
+                <h2 id="next" class="foot_text"><a href="feedback_form.html">Feedback</a>
+                    <span class="arrow">
+                        <img src="arrow.png">
+                    </span>
+                </h2>
+            </div>
+        </footer>
+    </body>
+</html>

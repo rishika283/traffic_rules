@@ -1,0 +1,130 @@
+body{
+    background: #222020;
+}
+.main{
+    background-color: rgb(234, 237, 239);
+    height: 80%;
+    width: 80%;
+    margin: 30px auto 30px auto;
+    padding: 0px 20px 20px 20px;
+    border: 3px solid rgb(208, 127, 246);
+}
+
+h1{
+    color: rgb(247, 88, 88);
+    font-family: 'Truculenta';
+    font-weight: bolder;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.trial{
+    height: 60px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+@keyframes move{
+    0% {margin-left:10px;}
+    100% {margin-left: 1000px;}
+}
+#car{
+    float: left;
+    height: 90px;
+    margin-left: 10px;
+    animation-name: move;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+#light{
+    float:right;
+    margin-right: 10px;
+    margin-top: 0;
+    height: 80px;
+}
+.para{
+    height: 250px;
+    background-color: rgb(246, 246, 170, 0.5);
+    margin-top:80px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#homeimg1{
+    height: 220px;
+    width: 400px;
+    padding: 20px 20px;
+    float:left;
+}
+#beg_text{
+    margin-top: 30px;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:'Libre Baskerville'
+}
+.list_container{
+    background-color: rgb(151, 229, 158, 0.5);
+    margin-top: 100px;
+    font-size: 17px;
+    font-family: 'Libre Baskerville';
+}
+ul{
+    list-style-type: none;
+    text-align: center;
+    line-height: 55px;
+    font-weight: bold;
+}
+li{
+    font-weight: normal;
+    line-height: 40px;
+}
+.table_container{
+    margin-top: 100px;
+    margin-bottom: 20px;
+    height: 200px;
+    width: 100%;
+    padding-top: 10px;
+}
+caption{
+    font-family: 'Libre Baskerville';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+table, td{
+    background-color: rgb(230, 172, 237, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    column-width: 400px;
+}
+tr{
+    text-align: center;
+}
+#text-row{
+    color: black;
+    font-family: 'Libre Baskerville';
+    font-weight: bolder;
+}
+.video{
+    background-color: rgb(250, 126, 150, 0.5);
+    margin: 200px auto 30px auto;
+    height: 350px;
+    width: 850px;
+    padding: 10px 10px 50px 10px;
+}
+#vidtext{
+    font-family: 'Libre Baskerville';
+    font-size: 20px;
+    text-align: center;
+}
+video{
+    width: 65%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
